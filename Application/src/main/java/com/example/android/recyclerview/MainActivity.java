@@ -14,24 +14,32 @@
 * limitations under the License.
 */
 
-
 package com.example.android.recyclerview;
 
 import android.content.Intent;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
+import android.os.AsyncTask;
 import android.os.Bundle;
 import android.support.v4.app.FragmentTransaction;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
-import android.widget.Button;
+import android.widget.ImageView;
+import android.widget.TextView;
 import android.widget.ViewAnimator;
 
+import com.example.android.JSONWeatherParser;
+import com.example.android.Weather;
+import com.example.android.WeatherHttpClient;
 import com.example.android.addClothing;
 import com.example.android.common.activities.SampleActivityBase;
 import com.example.android.common.logger.Log;
 import com.example.android.common.logger.LogFragment;
 import com.example.android.common.logger.LogWrapper;
 import com.example.android.common.logger.MessageOnlyLogFilter;
+
+import org.json.JSONException;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -53,6 +61,16 @@ public class MainActivity extends SampleActivityBase {
     String[] option = new String[5];
     // Whether the Log Fragment is currently shown
     private boolean mLogShown;
+    private TextView cityText;
+    private TextView condDescr;
+    private TextView temp;
+    private TextView hum;
+    private TextView press;
+    private TextView windSpeed;
+    private TextView windDeg;
+
+    private ImageView imgView;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -77,6 +95,20 @@ public class MainActivity extends SampleActivityBase {
         clothdata.put(3, clothchoice3);
         clothdata.put(1, clothchoice1);
         clothdata.put(4, clothchoice4);
+
+        String city = "Philadelphia, US";
+
+        cityText = (TextView) findViewById(R.id.cityText);
+        condDescr = (TextView) findViewById(R.id.condDescr);
+        temp = (TextView) findViewById(R.id.temp);
+        hum = (TextView) findViewById(R.id.hum);
+        press = (TextView) findViewById(R.id.press);
+        windSpeed = (TextView) findViewById(R.id.windSpeed);
+        windDeg = (TextView) findViewById(R.id.windDeg);
+//        imgView = (ImageView) findViewById(R.id.condIcon);
+
+        MainActivity.JSONWeatherTask task = new MainActivity.JSONWeatherTask();
+        task.execute(new String[]{city});
 
     }
 
@@ -109,6 +141,7 @@ public class MainActivity extends SampleActivityBase {
         }
         return false;
     }
+
 
     public void Addcloth(int m, String clothes){
         if (clothdata.containsKey(m)) {
@@ -189,5 +222,45 @@ public class MainActivity extends SampleActivityBase {
         msgFilter.setNext(logFragment.getLogView());
 
         Log.i(TAG, "Ready");
+    }
+    private class JSONWeatherTask extends AsyncTask<String, Void, Weather> {
+
+        @Override
+        protected Weather doInBackground(String... params) {
+            Weather weather = new Weather();
+            String data = ( (new WeatherHttpClient()).getWeatherData(params[0]));
+
+            try {
+                weather = JSONWeatherParser.getWeather(data);
+
+                // Let's retrieve the icon
+                weather.iconData =  (new WeatherHttpClient()).getImage(weather.currentCondition.getIcon());
+
+            } catch (JSONException e) {
+                e.printStackTrace();
+            }
+            return weather;
+
+        }
+
+
+        @Override
+        protected void onPostExecute(Weather weather) {
+            super.onPostExecute(weather);
+
+//            if (weather.iconData != null && weather.iconData.length > 0) {
+//                Bitmap img = BitmapFactory.decodeByteArray(weather.iconData, 0, weather.iconData.length);
+//                imgView.setImageBitmap(img);
+//            }
+
+            cityText.setText(weather.location.getCity() + "," + weather.location.getCountry());
+            condDescr.setText(weather.currentCondition.getCondition() + "(" + weather.currentCondition.getDescr() + ")");
+            temp.setText("" + Math.round((weather.temperature.getTemp() - 273.15)) + "°C");
+            hum.setText("" + weather.currentCondition.getHumidity() + "%");
+            press.setText("" + weather.currentCondition.getPressure() + " hPa");
+            windSpeed.setText("" + weather.wind.getSpeed() + " mps");
+            windDeg.setText("" + weather.wind.getDeg() + "°");
+
+        }
     }
 }

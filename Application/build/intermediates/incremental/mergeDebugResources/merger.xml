@@ -1810,13 +1810,7 @@
         <item name="android:shadowDy">-6.5</item>
     </style></file><file path="/Users/demouser/Desktop/WeatherClothingAndroidApp/Application/src/main/res/values/dimens.xml" qualifiers=""><dimen name="list_item_height">72dp</dimen></file><file path="/Users/demouser/Desktop/WeatherClothingAndroidApp/Application/src/main/res/values/base-strings.xml" qualifiers=""><string name="app_name">WeatherClothing</string><string name="intro_message">
         <![CDATA[
-        
-            
-
-                Hello World!
-
-            
-        
+        Hello World!
         ]]>
     </string><string name="new_item">New</string><string name="tshirtString">T-Shirt</string><string name="hoodieString">Hoodie</string><string name="sweaterString">Sweater</string><string name="lightjacketString">Light Jacket</string><string name="thickjacketString">Thick Jacket</string><string name="puffyjacketString">Puffy Jacket</string><string name="back">Back</string></file><file path="/Users/demouser/Desktop/WeatherClothingAndroidApp/Application/src/main/res/values/strings.xml" qualifiers=""><string name="element_text">Element</string><string name="grid_layout_manager">Grid Layout Manager</string><string name="linear_layout_manager">Linear Layout Manager</string></file><file path="/Users/demouser/Desktop/WeatherClothingAndroidApp/Application/src/main/res/values/template-dimens.xml" qualifiers=""><dimen name="margin_tiny">4dp</dimen><dimen name="margin_small">8dp</dimen><dimen name="margin_medium">16dp</dimen><dimen name="margin_large">32dp</dimen><dimen name="margin_huge">64dp</dimen><dimen name="horizontal_page_margin">@dimen/margin_medium</dimen><dimen name="vertical_page_margin">@dimen/margin_medium</dimen></file><file path="/Users/demouser/Desktop/WeatherClothingAndroidApp/Application/src/main/res/values/fragmentview_strings.xml" qualifiers=""><string name="sample_show_log">Show Log</string><string name="sample_hide_log">Hide Log</string></file><file path="/Users/demouser/Desktop/WeatherClothingAndroidApp/Application/src/main/res/values/template-styles.xml" qualifiers=""><style name="Theme.Base" parent="android:Theme.Light"/><style name="Theme.Sample" parent="Theme.Base"/><style name="AppTheme" parent="Theme.Sample"/><style name="Widget"/><style name="Widget.SampleMessage">
         <item name="android:textAppearance">?android:textAppearanceMedium</item>

@@ -15,7 +15,8 @@
   -->
 <LinearLayout
       xmlns:android="http://schemas.android.com/apk/res/android"
-      android:orientation="vertical"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
       android:layout_width="match_parent"
       android:layout_height="match_parent"
       android:id="@+id/sample_main_layout">
@@ -26,21 +27,108 @@
           android:layout_height="0px"
           android:layout_weight="1">
 
-        <ScrollView
-              style="@style/Widget.SampleMessageTile"
-              android:layout_width="match_parent"
-              android:layout_height="match_parent">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <ScrollView
+                style="@style/Widget.SampleMessageTile"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    style="@style/Widget.SampleMessage"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/intro_message" />
+            </ScrollView>
 
             <TextView
-                  style="@style/Widget.SampleMessage"
-                  android:layout_width="match_parent"
-                  android:layout_height="wrap_content"
-                  android:paddingLeft="@dimen/horizontal_page_margin"
-                  android:paddingRight="@dimen/horizontal_page_margin"
-                  android:paddingTop="@dimen/vertical_page_margin"
-                  android:paddingBottom="@dimen/vertical_page_margin"
-                  android:text="@string/intro_message" />
-        </ScrollView>
+                android:id="@+id/cityText"
+                style="?android:attr/textAppearanceMedium"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="City" />
+
+            <TextView
+                android:id="@+id/condDescr"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Condition" />
+
+            <TextView
+                android:id="@+id/temp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Temprature" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/press"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <TextView
+                    android:id="@+id/pressLab"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Pressure" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/hum"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Hum" />
+
+                <TextView
+                    android:id="@+id/humLab"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Humidity" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/windDeg"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="WindDeg" />
+
+                <TextView
+                    android:id="@+id/windLab"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Wind" />
+
+                <TextView
+                    android:id="@+id/windSpeed"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="WindSpeed" />
+            </LinearLayout>
+
+            <!--<ImageView-->
+                <!--android:id="@+id/condIcon"-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="wrap_content" />-->
+        </LinearLayout>
 
         <fragment
               android:name="com.example.android.common.logger.LogFragment"

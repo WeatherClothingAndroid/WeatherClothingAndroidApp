@@ -27,7 +27,7 @@ public final class R {
     public static final class id {
         private id() {}
 
-        public static final int item_touch_helper_previous_elevation = 0x7f07004e;
+        public static final int item_touch_helper_previous_elevation = 0x7f070052;
     }
     public static final class styleable {
         private styleable() {}

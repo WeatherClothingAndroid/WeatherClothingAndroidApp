@@ -716,9 +716,11 @@ id center_vertical
 id chains
 id checkbox
 id chronometer
+id cityText
 id clip_horizontal
 id clip_vertical
 id collapseActionView
+id condDescr
 id contentPanel
 id custom
 id customPanel
@@ -743,6 +745,8 @@ id home
 id homeAsUp
 id hoodieID
 id horizontal
+id hum
+id humLab
 id icon
 id icon_group
 id ifRoom
@@ -776,6 +780,8 @@ id packed
 id parent
 id parentPanel
 id percent
+id press
+id pressLab
 id progress_circular
 id progress_horizontal
 id puffyjacketID
@@ -821,6 +827,7 @@ id submit_area
 id sweaterID
 id tabMode
 id tag_transition_group
+id temp
 id text
 id text2
 id textSpacerNoButtons
@@ -838,6 +845,9 @@ id uniform
 id up
 id useLogo
 id vertical
+id windDeg
+id windLab
+id windSpeed
 id withText
 id wrap
 id wrap_content

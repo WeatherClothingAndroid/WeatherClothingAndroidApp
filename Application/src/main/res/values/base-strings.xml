@@ -19,13 +19,7 @@
     <string name="app_name">WeatherClothing</string>
     <string name="intro_message">
         <![CDATA[
-        
-            
-
-                Hello World!
-
-            
-        
+        Hello World!
         ]]>
     </string>
     <string name="new_item">New</string>
