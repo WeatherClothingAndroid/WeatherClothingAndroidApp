@@ -110,6 +110,7 @@ public class RecyclerViewFragment extends Fragment {
 
     /**
      * Set RecyclerView's LayoutManager to the one given.
+     * Set RecyclerView's LayoutManager to the one given.
      *
      * @param layoutManagerType Type of layout manager to switch to.
      */

@@ -1,5 +1,13 @@
 # WeatherClothingAndroidApp
 
+choice(34, 30);
+                TextView text = (TextView) findViewById(R.id.readingResults);
+                String textWanted = "";
+                for (int y = 0; y < option.length - 1; y++) {
+                    textWanted +=  option[y] + "+ ";
+                }
+                text.setText(textWanted);
+
 License
 -------
 

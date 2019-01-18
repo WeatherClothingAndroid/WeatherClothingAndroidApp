@@ -18,6 +18,7 @@ package com.example.android.common.activities;
 
 import android.os.Bundle;
 import android.support.v4.app.FragmentActivity;
+import android.view.View;
 
 import com.example.android.common.logger.Log;
 import com.example.android.common.logger.LogWrapper;
@@ -31,6 +32,7 @@ public class SampleActivityBase extends FragmentActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+
         super.onCreate(savedInstanceState);
     }
 
@@ -49,4 +51,5 @@ public class SampleActivityBase extends FragmentActivity {
 
         Log.i(TAG, "Ready");
     }
+
 }

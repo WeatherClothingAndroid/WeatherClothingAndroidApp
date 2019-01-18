@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/optionsClothing"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginLeft="10dp"
+    android:layout_marginTop="20dp"
+    android:layout_marginRight="10dp"
+    android:layout_marginBottom="20dp"
+    android:gravity="center"
+    android:orientation="vertical">
+
+    <Button
+        android:id="@+id/tshirtID"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/tshirtString" />
+
+    <Button
+        android:id="@+id/hoodieID"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/hoodieString" />
+
+    <Button
+        android:id="@+id/sweaterID"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/sweaterString" />
+
+    <Button
+        android:id="@+id/lightjacketID"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/lightjacketString" />
+
+    <Button
+        android:id="@+id/thickjacketID"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/thickjacketString" />
+
+    <Button
+        android:id="@+id/puffyjacketID"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/puffyjacketString" />
+
+</LinearLayout>

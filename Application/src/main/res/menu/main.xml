@@ -15,9 +15,16 @@
   -->
 
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
-      xmlns:tools="http://schemas.android.com/tools"
-      tools:ignore="AppCompatResource">
-    <item android:id="@+id/menu_toggle_log"
-          android:showAsAction="always"
-          android:title="@string/sample_show_log" />
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:ignore="AppCompatResource">
+    <item
+        android:id="@+id/menu_toggle_log"
+        android:layout_width="match_parent"
+        android:showAsAction="always"
+        android:title="@string/sample_show_log" />
+    <item
+        android:id="@+id/new_item"
+        android:layout_width="match_parent"
+        android:showAsAction="always"
+        android:title="@string/new_item" />
 </menu>

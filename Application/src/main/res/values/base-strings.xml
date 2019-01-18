@@ -16,16 +16,24 @@
 -->
 
 <resources>
-    <string name="app_name">RecyclerView</string>
+    <string name="app_name">WeatherClothing</string>
     <string name="intro_message">
         <![CDATA[
         
             
-                Demonstration of using RecyclerView with a LinearLayoutManager and GridLayoutManager
-                to create a vertical list. Tap \"SHOW LOG\" to view elements as they are bound to
-                their ViewHolder. The log also displays elements that you tap.
+
+                Hello World!
+
             
         
         ]]>
     </string>
+    <string name="new_item">New</string>
+    <string name="tshirtString">T-Shirt</string>
+    <string name="hoodieString">Hoodie</string>
+    <string name="sweaterString">Sweater</string>
+    <string name="lightjacketString">Light Jacket</string>
+    <string name="thickjacketString">Thick Jacket</string>
+    <string name="puffyjacketString">Puffy Jacket</string>
+    <string name="back">Back</string>
 </resources>
