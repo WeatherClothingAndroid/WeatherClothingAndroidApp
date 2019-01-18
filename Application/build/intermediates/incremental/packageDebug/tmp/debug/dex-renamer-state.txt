@@ -1,4 +1,4 @@
-#Fri Jan 18 12:45:37 EST 2019
+#Fri Jan 18 13:28:14 EST 2019
 base.0=/Users/demouser/Desktop/WeatherClothingAndroidApp/Application/build/intermediates/transforms/dexMerger/debug/0
 path.0=classes.dex
 renamed.0=classes.dex

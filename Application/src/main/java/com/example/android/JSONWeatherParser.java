@@ -77,8 +77,8 @@ public class JSONWeatherParser {
 
 
     private static JSONObject getObject(String tagName, JSONObject jObj)  throws JSONException {
-        JSONObject subObj = jObj.getJSONObject(tagName);
-        return subObj;
+//        JSONObject subObj = jObj.getJSONObject(tagName);
+        return jObj.getJSONObject(tagName);
     }
 
     private static String getString(String tagName, JSONObject jObj) throws JSONException {
